@@ -1,0 +1,21 @@
+.one {
+    border: solid black;
+    margin: 2%;
+    padding: 2%;
+    background-color: aqua;
+}
+
+.two {
+    border: solid black;
+    margin: 2%;
+    padding: 2%;
+    background-color: goldenrod;
+}
+
+
+.three {
+    border: solid black;
+    margin: 2%;
+    padding: 2%;
+    background-color: papayawhip;
+}
