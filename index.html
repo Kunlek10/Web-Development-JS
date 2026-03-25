@@ -3,39 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assignment-2</title>
+    <title>JS Utilities</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
-    <div class="one">
-      <p>Reverse String</p>
-      <input class="js-stringinput" placeholder="Enter a String">
-      <button onclick="
-      reverseString();
-      ">Reverse the string</button>
-      <p class="output-revString"></p>
+    <div class="page">
+        <header>
+            <h1>JS Utilities</h1>
+            <p class="subtitle">Three handy tools in one place</p>
+        </header>
+
+        <main>
+            <div class="card">
+                <h2>Reverse String</h2>
+                <div class="input-row">
+                    <input class="js-stringinput" placeholder="Enter a string">
+                    <button onclick="reverseString()">Reverse</button>
+                </div>
+                <p class="output output-revString"></p>
+            </div>
+
+            <div class="card">
+                <h2>Palindrome Check</h2>
+                <div class="input-row">
+                    <input class="js-number-pl" placeholder="Enter a number">
+                    <button onclick="palindrome()">Check</button>
+                </div>
+                <p class="output palindromeOrNOT"></p>
+            </div>
+
+            <div class="card">
+                <h2>Restaurant Bill</h2>
+                <div class="input-row">
+                    <input class="js-total" placeholder="Total cost ($)">
+                    <input class="js-tips" placeholder="Tip (%)">
+                    <button onclick="cal()">Calculate</button>
+                </div>
+                <p class="output js-output-resturant"></p>
+            </div>
+        </main>
     </div>
 
-    <div class="two">
-      <p>Palindrome Number</p>
-      <input class="js-number-pl" placeholder="Enter a number">
-      <button onclick="
-      palindrome();
-      ">Check for Palindrome</button>
-      <H3><P class="palindromeOrNOT"></P></H3>
-    </div>
-
-
-    <div class="three">
-      <p>Billing Information for a Resturant</p>
-      <input class="js-total" placeholder="Total Cost">
-      <input class="js-tips" placeholder="Tips Percentage">
-      <button onclick="
-      cal();
-      ">Calculate</button>
-      <p class="js-output-resturant"></p>
-    </div>
+    <script src="index.js"></script>
 </body>
-<script src="index.js"></script>
 </html>

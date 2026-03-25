@@ -1,30 +1,16 @@
-function cal() {
-    var inputTot = document.querySelector('.js-total');
-    var inputTips = document.querySelector('.js-tips');
-    const tot = Number(inputTot.value);
-    const tips = Number(inputTips.value);
-    const grandTotal = tot + (tips/100) * tot;
-    console.log(tot, tips, grandTotal);
-
-
-document.querySelector('.js-output-resturant').innerHTML = `Total Cost after Tips= ${grandTotal}`;
-}
-
 function reverseString() {
-    var string = document.querySelector('.js-stringinput');
-    var string = string.value;
-    let len = string.length
-    var newString = "";
-    for (i = len - 1; i >= 0; i--) {
-        newString += string[i]
-
-    document.querySelector('.output-revString').innerHTML = `Reversed string of: ${string} is: ${newString}`;
+    var input = document.querySelector('.js-stringinput');
+    var string = input.value;
+    let newString = "";
+    for (let i = string.length - 1; i >= 0; i--) {
+        newString += string[i];
     }
+    const el = document.querySelector('.output-revString');
+    el.textContent = `Reversed: ${newString}`;
 }
 
 function palindrome() {
-    var givenNum = document.querySelector('.js-number-pl');
-    var givenNum = Number(givenNum.value);
+    var givenNum = Number(document.querySelector('.js-number-pl').value);
     let revNum = 0;
     let temp = givenNum;
     while (temp != 0) {
@@ -32,12 +18,13 @@ function palindrome() {
         revNum = revNum * 10 + digit;
         temp = Math.floor(temp / 10);
     }
-    if (givenNum == revNum) {
-        var result = 'Palindrome';
-    } else {
-        var result = 'Not Palindrome';
-    }
+    var result = givenNum === revNum ? 'Palindrome ✓' : 'Not a Palindrome ✗';
+    document.querySelector('.palindromeOrNOT').innerHTML = `The number is: <strong>${result}</strong>`;
+}
 
-
-    document.querySelector('.palindromeOrNOT').innerHTML = `the numner is: ${result}`;
+function cal() {
+    const tot = Number(document.querySelector('.js-total').value);
+    const tips = Number(document.querySelector('.js-tips').value);
+    const grandTotal = tot + (tips / 100) * tot;
+    document.querySelector('.js-output-resturant').innerHTML = `Total with tip: <strong>$${grandTotal.toFixed(2)}</strong>`;
 }
